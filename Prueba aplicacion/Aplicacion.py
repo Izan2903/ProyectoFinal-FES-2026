@@ -24,7 +24,7 @@ class App(tk.Tk):## creacion de la clase App con tk.Tk como clase padre, de la q
         marco.pack(fill="both", expand=True) ## adapta automaticamente el tamaño del marco para que ocupe todo el espacio que puede
         
         ttk.Label(marco, text="Archivo entrada:").grid(row=0, column=0, sticky="w") ## marco es el padre que acabamos de crear
-        ttk.Entry(marco, textvariable=self.ruta1, width=45).grid(row=0, column=1, sticky="we", pady=4)
+        ttk.Entry(marco, textvariable=self.ruta1, width=45,state="readonly").grid(row=0, column=1, sticky="we", pady=4)
         ## grid divide la ventana en cachos y ordena los diferentes frames en funcion de la posicion, pady deja un espacio arriba, viene de "pad" y el eje "y"
         ## el argumento sticky indica a que borde se debe de pegar, w=izquierda | we=rellenar de izierda a derecha
         
@@ -45,6 +45,7 @@ class App(tk.Tk):## creacion de la clase App con tk.Tk como clase padre, de la q
         ttk.Button(marco, text="Ejecutar", command= self.ejecutarPrograma).grid(row=4, column=0, columnspan= 3, sticky="we")
     
     def encontrarRuta(self, archivo):
+        #ruta = filedialog.askdirectory(title="Selecciona un archivo", mustexist=True) ## carpeta
         ruta = filedialog.askopenfilename(title="Selecciona un archivo")
         if ruta: ## verificar que no se guarde nada si se cierra la ventana emergente sin seleccionar opcion
             archivo.set(ruta)
@@ -53,7 +54,7 @@ class App(tk.Tk):## creacion de la clase App con tk.Tk como clase padre, de la q
         a = self.ruta1
         b = self.ruta2
         print(f"{a} || {b}")
-        print('llamado en la linea 52')
+        print('llamado en la linea 53')
  
 
 App().mainloop()        
