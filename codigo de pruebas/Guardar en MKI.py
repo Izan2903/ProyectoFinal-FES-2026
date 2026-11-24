@@ -3,7 +3,7 @@ import struct
 arxiu_ex = "Archivos de prueba/arxiu_comp.MKI" ## On veurem el comprimit
 dades_ex = "0101101110"
 ruta_ex = "C:/UAB/2n.Software/Projecte_Final" ## D'on agafem el descomprimit
-taula_ex = [('H', 0), ('o', 10), ('l', 110), ('a', 1110)]
+taula_ex = list([('H', 0), ('o', 10), ('l', 110), ('a', 1110)])
 
 ## Dades de prova de funcionament
 
