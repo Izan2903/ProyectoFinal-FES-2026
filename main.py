@@ -16,3 +16,6 @@ for i in lista:
         if caracter == i:
             textoComprimido += str(indice)
 
+escriu_MKI("Archivos de prueba/archivo comprimido.MKI","nombre del archivo",tabla,textoComprimido)
+
+
